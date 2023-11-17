@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    
+}
+/*HEADER*/
+header{
+    margin: auto;
+    background-color: #FBF3FF;
+    padding-bottom: 10px;
+}
+
+.logo{
+    text-align: center;
+}
+#hlogo{
+    height: 150px;
+    width: 250px;
+    padding-top: 15px;
+}
+
+#menu{
+    text-align: center;
+    padding-bottom: 10px;    
+}
+
+.buttons{
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #362A16;
+}
+
+.buttons:hover{
+    border-bottom: 2px solid black;
+    padding-bottom: 2px;
+}
+
+#popular{
+    background-color: #FFB1EC;
+    border-radius: 10px;
+    text-decoration: none;
+
+    padding: 7px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #362A16;
+}
+/*FIN HEADER*/
+
+/*BODY*/
+
+#saludo1{
+    padding-left: 80px;
+    padding-bottom: 35px;
+    font-family: 'Montserrat', sans-serif;
+    size: big;
+    padding-top: 50px;
+}
+#parrafo1{
+    padding-left: 80px;
+    padding-right: 50px;
+    line-height: 1.5;
+    padding-bottom: 40px;
+}
+/*FIN BODY*/
+
+/*FLIPPING CARDS*/
+#productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #D6C3E1;
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+} 
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+/*FIN DE FLIPPING CARDS*/
+
+/*FOOTER*/
+footer{
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin: 0px;
+    background-color: #FFB1EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 90px;
+}
+#flogo{
+    height: 75px;
+    width: 120px;
+    margin-bottom: 1rem;
+    margin-top: 30px;
+}
+.RS, .footer-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.RSicon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid white;
+    background-image: que;
+    background-position: center;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+}
+.RSicon:hover{
+    background-color: #A5ACEA;
+    
+}
+
+.RSimg{
+    width: 50px;
+}
+.footer-menu-container{
+    list-style-type: none;
+    color: white;
+    font-size: 15px;
+}
+
+/*FIN DEL FOOTER*/

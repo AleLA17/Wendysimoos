@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    
+}
+/*HEADER*/
+header{
+    margin: auto;
+    background-color: #FBF3FF;
+    padding-bottom: 10px;
+}
+
+.logo{
+    text-align: center;
+}
+#hlogo{
+    height: 150px;
+    width: 250px;
+    padding-top: 15px;
+}
+
+#menu{
+    text-align: center;
+    padding-bottom: 10px;    
+}
+
+.buttons{
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #362A16;
+}
+
+#inicio{
+    background-color: #FFB1EC;
+    border-radius: 10px;
+    text-decoration: none;
+
+    padding: 7px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #362A16;
+}
+
+.buttons:hover{
+    border-bottom: 2px solid black;
+    padding-bottom: 2px;
+}
+/*FIN HEADER*/
+
+/*BODY*/
+
+#back{
+    height: 50%;
+    width: 90%;
+}
+#saludo1{
+    padding-left: 80px;
+    padding-bottom: 35px;
+    font-family: 'Montserrat', sans-serif;
+    size: big;
+    padding-top: 50px;
+}
+#parrafo1{
+    padding-left: 80px;
+    padding-right: 50px;
+    line-height: 1.5;
+    padding-bottom: 40px;
+}
+#parrafo2{
+    padding-left: 80px;
+    padding-right: 50px;
+    line-height: 1.5;
+    padding-bottom: 40px;
+    padding-top: 40px;
+
+}
+#spacer{
+    height: 10px;
+}
+#video{
+    margin-top: 80px;
+}
+/*FIN DE BODY*/
+
+
+/*FOOTER*/
+footer{
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin: 0px;
+    background-color: #FFB1EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 90px;
+}
+#flogo{
+    height: 75px;
+    width: 120px;
+    margin-bottom: 1rem;
+    margin-top: 30px;
+}
+.RS, .footer-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.RSicon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid white;
+    background-image: que;
+    background-position: center;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+}
+.RSicon:hover{
+    background-color: #A5ACEA;
+    
+}
+
+.RSimg{
+    width: 50px;
+}
+.footer-menu-container{
+    list-style-type: none;
+    color: white;
+    font-size: 15px;
+}
+
+/*FIN DEL FOOTER*/

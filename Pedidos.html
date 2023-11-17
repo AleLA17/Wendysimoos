@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Pedidos</title>
+        <link rel="stylesheet" type="text/css" href="pedidos.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="shortcut icon" href="logobajo.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+        <script type="text/javascript">
+            document.getElementById("resultado").value = "0";
+
+            function calcularTotal() {
+                var op = document.getElementsByClassName("op");
+                var cantidades = document.getElementsByClassName("cantidad");
+                var suma = 0;
+
+                for (var i = 0; i < op.length; i++) {
+                    if (op[i].checked) {
+                        var valorNumerico = parseFloat(op[i].value) * parseFloat(cantidades[i].value);
+                        if (!isNaN(valorNumerico)) {
+                            suma += valorNumerico;
+                        }
+                    }
+                }
+
+                return suma;
+            }
+
+            function mostrarTotal() {
+                var resultado = document.getElementById("resultado");
+                resultado.value = calcularTotal();
+            }
+        </script>
+    </head>
+
+	<header>
+
+			<div class="logo">
+				<img src="logo.png" id="hlogo">
+			</div>
+
+			<div id="menu" align="center">
+				<a href="Inicio.html" class="buttons">Inicio</a>
+                <a href="#title"  id="pedidos">Pedidos</a>
+                <a href="Popular.html" class="buttons" id="postres">Populares</a>
+                <a href="Contacto.html" class="buttons">Contacto</a>
+			</div>
+		
+	</header>
+
+	<body>
+
+        <div class="contact_form">
+            <form action="">
+                <fieldset>
+                    <h1 id="title">CALCULA TU PEDIDO</h1>
+                    <br>
+
+                    <div class="opciones">
+                        <input type="checkbox" name="pay arabe" id="pay_arabe" class="op"  value="200"> Pay Árabe $200
+                        <input type="number" class="cantidad" id="cantPA">
+                        <br><br>
+                        
+                        <input type="checkbox" name="pastel" id="pastel_choc" class="op" value="650"> Pastel de chocolate $650
+                        <input type="number" class="cantidad" id="cantPC">
+                        <br><br>
+
+                        <input type="checkbox" name="galletas" id="galletas" class="op" value="50"> Galletitas de mantequilla(unidades: 15) $50
+                        <input type="number" class="cantidad" id="cantG">
+                        <br><br>
+
+                        <input type="checkbox" name="empanadas" id="empanadas" class="op" value="30"> Empanadas (unidades: 5) $30
+                        <input type="number" class="cantidad" id="cantE">
+                        <br><br>
+
+                        <input type="checkbox" name="pay queso" id="pay_queso" class="op" value="150"> Pay de Queso $150
+                        <input type="number" class="cantidad" id="cantPQ">
+
+                    </div>
+                    <br>
+
+                    <div id="aviso" align="center">
+                        Recuerda agregar numeros postivos para evitar <br>resultados erróneos.
+
+                    </div>
+
+                    <div class="contTotal">
+                        <h3 id="Total">Total</h3>
+                        <input type="text" id="resultado">
+
+                    </div>
+
+
+                    <div class="button">
+                        <input type="button" value="Calcular" class="botones" onclick="mostrarTotal()">
+                        <input type="reset" value="Borrar" class="botones">
+                    </div>
+
+                </fieldset>
+            </form>
+
+        </div>
+
+        
+        
+	</body>
+
+
+	<footer>
+            <img src="logobajo.png" id="flogo">
+            <div class="RS">
+                
+                <a href="https://es-la.facebook.com/" class="RSicon">
+                    <img src="face.png" alt="" class="RSimg">
+                </a>
+                <a href="https://www.instagram.com/" class="RSicon">
+                    <img src="insta.png" alt="" class="RSimg">
+                </a>
+                <a href="https://twitter.com/?lang=es" class="RSicon">
+                    <img src="twi.png" alt="" class="RSimg">
+                </a>
+            </div>
+            <ul class="footer-menu-container">
+                <li class="menu-item">Contacto: wendysimoos09@gmail.com</li>
+                <li class="menu-item">Teléfono: +52 644 123 456</li>
+            </ul>
+    </footer>
+</html>
